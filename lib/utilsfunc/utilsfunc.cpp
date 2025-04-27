@@ -30,6 +30,7 @@ void initRobot() {
     delay(15);
 }
 
+//write method should work just with angle parameter, despite its present location, but TEST IT
 void moveRobot(long startPos, long endPos) {
   long diffPos = startPos - endPos;
   
