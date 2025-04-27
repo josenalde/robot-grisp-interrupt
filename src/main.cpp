@@ -8,29 +8,21 @@ Servo myservo;
 //p1: 00000001 1
 //p2: 00000010 2
 //p3: 00000011 3
-//volatile unsigned long timestamp_last_button = micros();
 
 void IRAM_ATTR isrP1() {
   btnMask = RESET;
-  //if ( (micros() - timestamp_last_button) >= TEMPO_DEBOUNCE ) {
-    btnMask = 0x01;
-    //timestamp_last_button = micros();
-  }
-//}
+  btnMask = 0x01;
+}
+
 void IRAM_ATTR isrP2() {
   btnMask = RESET;
-  //if ( (micros() - timestamp_last_button) >= TEMPO_DEBOUNCE ) {
-    btnMask = 0x02;
-    //   timestamp_last_button = micros();
-  }
-//}
+  btnMask = 0x02;
+}
+
 void IRAM_ATTR isrP3() {
   btnMask = RESET;
-  //if ( (micros() - timestamp_last_button) >= TEMPO_DEBOUNCE ) {
-    btnMask = 0x03;
-  //  timestamp_last_button = micros();
+  btnMask = 0x03;
   }
-//}
 
 void setup() {
   Serial.begin(115200);
