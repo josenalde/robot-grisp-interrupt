@@ -1,3 +1,4 @@
+//by Josenalde Oliveira@2025
 #ifndef UTILSFUNC_H
 #define UTILSFUNC_H
 
